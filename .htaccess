@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+Options -Indexes
+RewriteEngine on
+ErrorDocument 404 https://bizcorddigital.com/404.php
+ErrorDocument 403 https://bizcorddigital.com/404.php
